@@ -1,6 +1,6 @@
 ﻿namespace RPG_heroes
 {
-    internal class Program
+    internal abstract class Program
     {
         static void Main(string[] args)
         {
