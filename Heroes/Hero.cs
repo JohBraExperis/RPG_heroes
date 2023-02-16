@@ -39,8 +39,41 @@ namespace RPG_heroes.Heroes
         // This LevelUp method gets overidden in the child.
         public abstract void LevelUp();
 
-        public abstract void Equip()
+        public  void Equip(Item item)
         {
+            if (item is Armor)
+            {
+                Armor armor = (Armor)item;
+                if (armor.RequiredLevel >= Level)
+
+                {
+                    throw new Exeptions.InvalidLevelExeption();
+                }
+
+
+                if (!ValidArmorTypes.Contains(armor.armorType))
+                {
+                    throw new Exeptions.InvalidArmorExeption();
+                }
+            }
+
+
+            if (item is Weapons)
+            {
+                Weapons weapons = (Weapons)item;
+                if (weapons.RequiredLevel >= Level)
+
+                {
+                    throw new Exeptions.InvalidLevelExeption();
+                }
+
+
+                if (!ValidWeaponTypes.Contains(weapons.weaponType))
+                {
+                    throw new Exeptions.InvalidArmorExeption();
+                }
+            }
+
 
         }
 
