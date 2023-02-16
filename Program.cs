@@ -1,4 +1,6 @@
-﻿namespace RPG_heroes
+﻿using RPG_heroes.Heroes;
+
+namespace RPG_heroes
 {
     internal abstract class Program
     {

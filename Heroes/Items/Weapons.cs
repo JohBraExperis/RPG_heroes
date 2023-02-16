@@ -5,8 +5,29 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace RPG_heroes.Heroes.Items
+{ 
+
+     public enum WeaponType
 {
-    internal class Weapons
+    Axes,
+    Bows,
+    Daggers,
+    Hammers,
+    Staffs,
+    Swords,
+    Wands
+}
+
+    public class Weapons : Item
     {
+
+        public Weapons( string name, int requiredLevel, Slot equipmentSlot): base (name, requiredLevel, equipmentSlot)
+        { 
+        
+
+
+        }
+
+        public class WeaponDamage{}
     }
 }
