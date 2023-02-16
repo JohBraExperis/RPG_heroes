@@ -39,7 +39,12 @@ namespace RPG_heroes.Heroes
         // This LevelUp method gets overidden in the child.
         public abstract void LevelUp();
 
+        public abstract void Equip()
+        {
+
+        }
 
 
-}
+
+    }
 }

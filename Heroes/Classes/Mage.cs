@@ -12,12 +12,17 @@ namespace RPG_heroes.Heroes.Classes
     {
         public Mage (string name): base (name) 
         {
-            LevelAttribute = new HeroAttributes(1, 1, 8);
             Name = name;
+
+            // constructing the LevelAttribute as HeroAttributes.
+            LevelAttribute = new HeroAttributes(1, 1, 8);
+
+            // adding valid weapons and armor to the lists
             ValidWeaponTypes.AddRange(new[] { WeaponType.Staffs, WeaponType.Wands });
             ValidArmorTypes.AddRange(new[] { ArmorType.Cloth });
         }
 
+        // Adding 
     public override void LevelUp()
         {
             Level += 1;
