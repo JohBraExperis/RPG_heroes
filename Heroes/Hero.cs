@@ -32,10 +32,6 @@ namespace RPG_heroes.Heroes
             Equipment.Add(Slot.Body, null);
             Equipment.Add(Slot.Legs, null);
 
-
-
-
-
             ValidWeaponTypes = new List<WeaponType>();
             ValidArmorTypes = new List<ArmorType>();
         }
@@ -125,6 +121,24 @@ namespace RPG_heroes.Heroes
             }
 
             return HeroDamage;
+
+        }
+
+        // Method containing a stringBuilder to display Hero specs.
+        public void HeroDisplay()
+        {
+
+            StringBuilder stringBuilder = new StringBuilder();
+
+            stringBuilder.Append("Hero name: " + Name);
+            stringBuilder.Append("Class: " + GetType());
+            stringBuilder.Append("Level: " + Level);
+            stringBuilder.Append(TotalAttributes().Strength);
+            stringBuilder.Append(TotalAttributes().Dexterity);
+            stringBuilder.Append(TotalAttributes().Intelligence);
+            stringBuilder.Append(HeroDamage());
+
+            Console.WriteLine(stringBuilder);
 
         }
 
