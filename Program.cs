@@ -8,14 +8,17 @@ namespace RPG_heroes
     {
         static void Main(string[] args)
         {
-            Mage SondreDude = new Mage("SondreDude");
+
+
+            // Make a new mage.
+
+           /* Mage newHero = new Mage("Randy Marsh");
             Weapons weapon = new Weapons("test", 0, Slot.Weapon, 1, WeaponType.Staff);
 
-            SondreDude.Equip(weapon);
+            newHero.Equip(weapon);
 
-            SondreDude.HeroDisplay();
-
-      
+            newHero.HeroDisplay();
+           */
         }
 
     }
