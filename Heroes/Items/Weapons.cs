@@ -21,14 +21,15 @@ namespace RPG_heroes.Heroes.Items
 
     public class Weapons : Item
     {
-        public WeaponType weaponType { get; set; }
+        public WeaponType WeaponTypes { get; set; }
 
         public int WeaponDamage { get; set; }
 
         public Weapons( string name, int requiredLevel, Slot equipmentSlot, int weaponDamage): base (name, requiredLevel, equipmentSlot)
         { 
         
-           WeaponDamage= weaponDamage;
+           WeaponDamage = weaponDamage;
+            
 
         }
 

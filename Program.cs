@@ -1,4 +1,5 @@
 ﻿using RPG_heroes.Heroes;
+using RPG_heroes.Heroes.Classes;
 
 namespace RPG_heroes
 {
@@ -6,7 +7,12 @@ namespace RPG_heroes
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Mage SondreDude = new Mage("SondreDude");
+
+            SondreDude.HeroDisplay();
+
+      
         }
+
     }
 }

@@ -14,12 +14,12 @@ namespace RPG_heroes.Heroes
     {
         public string Name { get; set; }
         public int Level { get; set; }
-        public int DamageAttribute { get; set; }
+        public int DamageAttribute { get; set; } = 0;
 
-        public Dictionary<Slot, Item> Equipment;
-        public List<WeaponType> ValidWeaponTypes { get; set; }
-        public List<ArmorType> ValidArmorTypes { get; set; }
-        public HeroAttributes LevelAttribute { get; set; }
+        public Dictionary<Slot, Item?> Equipment = new Dictionary<Slot, Item?>();
+        public List<WeaponType> ValidWeaponTypes { get; set; } = new List<WeaponType>();
+        public List<ArmorType> ValidArmorTypes { get; set; } = new List<ArmorType>();
+        public HeroAttributes LevelAttribute { get; set; } = new HeroAttributes(1, 1, 1);
 
         public Hero(string name)
         {
@@ -95,7 +95,7 @@ namespace RPG_heroes.Heroes
                 }
 
 
-                if (!ValidWeaponTypes.Contains(weapons.weaponType))
+                if (!ValidWeaponTypes.Contains(weapons.WeaponTypes))
                 {
                     throw new Exeptions.InvalidArmorExeption();
                 }
@@ -110,7 +110,7 @@ namespace RPG_heroes.Heroes
         {
             int HeroDamage = 0;
 
-            if (Equipment.ContainsKey(Slot.Weapon))
+            if (!Equipment.ContainsValue(null))
             {
                 Weapons weapon = (Weapons)Equipment[Slot.Weapon];
                 HeroDamage = weapon.WeaponDamage * (1 + DamageAttribute / 100);
@@ -130,13 +130,13 @@ namespace RPG_heroes.Heroes
 
             StringBuilder stringBuilder = new StringBuilder();
 
-            stringBuilder.Append("Hero name: " + Name);
-            stringBuilder.Append("Class: " + GetType());
-            stringBuilder.Append("Level: " + Level);
-            stringBuilder.Append(TotalAttributes().Strength);
-            stringBuilder.Append(TotalAttributes().Dexterity);
-            stringBuilder.Append(TotalAttributes().Intelligence);
-            stringBuilder.Append(HeroDamage());
+            stringBuilder.AppendLine("Hero name: " + Name);
+            stringBuilder.AppendLine("Class: " + GetType().Name);
+            stringBuilder.AppendLine("Level: " + Level);
+            stringBuilder.AppendLine("Strength: " + TotalAttributes().Strength);
+            stringBuilder.AppendLine("Dexterity: " + TotalAttributes().Dexterity);
+            stringBuilder.AppendLine("Intelligence: " + TotalAttributes().Intelligence);
+            stringBuilder.AppendLine("Damage: " + HeroDamage());
 
             Console.WriteLine(stringBuilder);
 
