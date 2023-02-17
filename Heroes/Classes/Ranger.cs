@@ -16,7 +16,7 @@ namespace RPG_heroes.Heroes.Classes
 
             LevelAttribute = new HeroAttributes(1, 7, 1);
             Name = name;
-            ValidWeaponTypes.AddRange(new[] { WeaponType.Bows });
+            ValidWeaponTypes.AddRange(new[] { WeaponType.Bow });
             ValidArmorTypes.AddRange(new[] { ArmorType.Leather, ArmorType.Mail });
 
             // calculating DamageAttributes based on Dexterity  

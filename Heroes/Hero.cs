@@ -78,7 +78,7 @@ namespace RPG_heroes.Heroes
                 }
 
 
-                if (!ValidArmorTypes.Contains(armor.armorType))
+                if (!ValidArmorTypes.Contains(armor.ArmorTypes))
                 {
                     throw new Exeptions.InvalidArmorExeption();
                 }

@@ -16,7 +16,7 @@ namespace RPG_heroes.Heroes.Classes
 
             LevelAttribute = new HeroAttributes(2, 6, 1);
             Name = name;
-            ValidWeaponTypes.AddRange(new[] { WeaponType.Daggers, WeaponType.Swords  });
+            ValidWeaponTypes.AddRange(new[] { WeaponType.Dagger, WeaponType.Sword  });
             ValidArmorTypes.AddRange(new[] { ArmorType.Leather, ArmorType.Mail });
 
             // Setting the DamageAttribute to the total dexterity of the Rogue class  

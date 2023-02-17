@@ -18,7 +18,7 @@ namespace RPG_heroes.Heroes.Classes
             LevelAttribute = new HeroAttributes(1, 1, 8);
 
             // adding valid weapons and armor to the lists
-            ValidWeaponTypes.AddRange(new[] { WeaponType.Staffs, WeaponType.Wands });
+            ValidWeaponTypes.AddRange(new[] { WeaponType.Staff, WeaponType.Wand });
             ValidArmorTypes.AddRange(new[] { ArmorType.Cloth });
 
             // calculating DamageAttributes based on intelligence  
