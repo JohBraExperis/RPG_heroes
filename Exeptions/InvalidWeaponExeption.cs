@@ -6,17 +6,14 @@ using System.Threading.Tasks;
 
 namespace RPG_heroes.Exeptions
 {
-    internal class InvalidWeaponExeption : Exception
+    public class InvalidWeaponExeption : Exception
     {
 
-        public class InvalidArmorExeption : Exception
-        {
-
-            public InvalidArmorExeption()
+            public InvalidWeaponExeption()
             {
             }
 
-            public InvalidArmorExeption(string message)
+            public InvalidWeaponExeption(string message)
                 : base(message)
             {
             }
@@ -25,6 +22,4 @@ namespace RPG_heroes.Exeptions
 
         }
 
-
-    }
-}
+   }

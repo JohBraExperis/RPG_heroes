@@ -23,9 +23,9 @@ namespace RPG_heroes.Heroes.Items
     {
         public WeaponType WeaponTypes { get; set; }
 
-        public int WeaponDamage { get; set; }
+        public double WeaponDamage { get; set; }
 
-        public Weapons( string name, int requiredLevel, Slot equipmentSlot, int weaponDamage, WeaponType weaponType): base (name, requiredLevel, equipmentSlot)
+        public Weapons( string name, int requiredLevel, Slot equipmentSlot, double weaponDamage, WeaponType weaponType): base (name, requiredLevel, equipmentSlot)
         { 
            WeaponDamage = weaponDamage;
            WeaponTypes = weaponType;

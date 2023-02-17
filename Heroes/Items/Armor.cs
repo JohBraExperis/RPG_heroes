@@ -26,9 +26,9 @@ namespace RPG_heroes.Heroes.Items
         public Slot SlotType;
 
 
-        public Armor(string name, int requiredLevel, Slot eqipmentSlot, ArmorType armorType): base(name, requiredLevel, eqipmentSlot) {
+        public Armor(string name, int requiredLevel, Slot eqipmentSlot, ArmorType armorType, HeroAttributes armorAttribute): base(name, requiredLevel, eqipmentSlot) {
 
-            ArmorAttribute = new HeroAttributes(1, 1, 1);
+            ArmorAttribute = armorAttribute;
             ArmorTypes = armorType;
         }
   

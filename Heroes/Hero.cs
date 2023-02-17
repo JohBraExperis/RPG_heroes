@@ -14,7 +14,7 @@ namespace RPG_heroes.Heroes
     {
         public string Name { get; set; }
         public int Level { get; set; }
-        public int DamageAttribute { get; set; } = 0;
+        public double DamageAttribute { get; set; } = 0;
 
         public Dictionary<Slot, Item?> Equipment = new Dictionary<Slot, Item?>();
         public List<WeaponType> ValidWeaponTypes { get; set; } = new List<WeaponType>();
@@ -42,9 +42,9 @@ namespace RPG_heroes.Heroes
         public HeroAttributes TotalAttributes()
         {
 
-            int Strength = 0;
-            int Dexterity = 0;
-            int Intelligence = 0;
+            double Strength = 0;
+            double Dexterity = 0;
+            double Intelligence = 0;
 
             foreach (Item item in Equipment.Values)
             {
@@ -66,12 +66,12 @@ namespace RPG_heroes.Heroes
             return TotalAttributes;
         }
 
-        public  void Equip(Item item)
+        public void Equip(Item item)
         {
             if (item is Armor)
             {
                 Armor armor = (Armor)item;
-                if (armor.RequiredLevel >= Level)
+                if (armor.RequiredLevel > Level)
 
                 {
                     throw new Exeptions.InvalidLevelExeption();
@@ -88,7 +88,7 @@ namespace RPG_heroes.Heroes
             if (item is Weapons)
             {
                 Weapons weapons = (Weapons)item;
-                if (weapons.RequiredLevel >= Level)
+                if (weapons.RequiredLevel > Level)
 
                 {
                     throw new Exeptions.InvalidLevelExeption();
@@ -97,7 +97,7 @@ namespace RPG_heroes.Heroes
 
                 if (!ValidWeaponTypes.Contains(weapons.WeaponTypes))
                 {
-                    throw new Exeptions.InvalidArmorExeption();
+                    throw new Exeptions.InvalidWeaponExeption();
                 }
             }
 
@@ -106,14 +106,16 @@ namespace RPG_heroes.Heroes
 
         }
 
-        public int HeroDamage()
+        public double HeroDamage()
         {
-            int HeroDamage = 0;
+            double HeroDamage = 1;
 
-            if (!Equipment.ContainsValue(null))
+            if (Equipment[Slot.Weapon] != null)
             {
                 Weapons weapon = (Weapons)Equipment[Slot.Weapon];
                 HeroDamage = weapon.WeaponDamage * (1 + DamageAttribute / 100);
+                Console.WriteLine(weapon.WeaponDamage);
+                Console.WriteLine(DamageAttribute);
             }
             else
             {

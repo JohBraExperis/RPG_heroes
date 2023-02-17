@@ -9,11 +9,11 @@ namespace RPG_heroes.Heroes.Attributes
     public class HeroAttributes
     {
 
-        public int Strength { get; set; }
-        public int Dexterity { get; set; }
-        public int Intelligence { get; set; }
+        public double Strength { get; set; }
+        public double Dexterity { get; set; }
+        public double Intelligence { get; set; }
 
-        public HeroAttributes(int strength, int dexterity, int intelligence) {
+        public HeroAttributes(double strength, double dexterity, double intelligence) {
 
             Strength = strength;
             Dexterity = dexterity;
