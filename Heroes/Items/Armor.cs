@@ -19,6 +19,8 @@ namespace RPG_heroes.Heroes.Items
     public class Armor : Item
     {
 
+        public ArmorType armorType { get; set; }
+
         public HeroAttributes ArmorAttribute { get; set; }
 
 

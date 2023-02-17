@@ -20,6 +20,9 @@ namespace RPG_heroes.Heroes.Classes
             // adding valid weapons and armor to the lists
             ValidWeaponTypes.AddRange(new[] { WeaponType.Staffs, WeaponType.Wands });
             ValidArmorTypes.AddRange(new[] { ArmorType.Cloth });
+
+            // calculating DamageAttributes based on intelligence  
+            DamageAttribute = TotalAttributes().Intelligence;
         }
 
         // Adding 

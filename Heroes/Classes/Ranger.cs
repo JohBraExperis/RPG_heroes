@@ -18,6 +18,9 @@ namespace RPG_heroes.Heroes.Classes
             Name = name;
             ValidWeaponTypes.AddRange(new[] { WeaponType.Bows });
             ValidArmorTypes.AddRange(new[] { ArmorType.Leather, ArmorType.Mail });
+
+            // calculating DamageAttributes based on Dexterity  
+            DamageAttribute = TotalAttributes().Dexterity;
         }
 
         public override void LevelUp()

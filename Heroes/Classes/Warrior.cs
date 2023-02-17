@@ -17,6 +17,9 @@ namespace RPG_heroes.Heroes.Classes
             Name = name;
             ValidWeaponTypes.AddRange(new[] { WeaponType.Axes, WeaponType.Hammers, WeaponType.Swords });
             ValidArmorTypes.AddRange(new[] { ArmorType.Plate, ArmorType.Mail });
+
+            // Setting the DamageAttribute to the total strength of the Warrior class  
+            DamageAttribute = TotalAttributes().Strength;
         }
 
         public override void LevelUp()

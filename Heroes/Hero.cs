@@ -1,4 +1,5 @@
 ﻿using RPG_heroes.Heroes.Attributes;
+using RPG_heroes.Heroes.Classes;
 using RPG_heroes.Heroes.Items;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,7 @@ namespace RPG_heroes.Heroes
     {
         public string Name { get; set; }
         public int Level { get; set; }
+        public int DamageAttribute { get; set; }
 
         public Dictionary<Slot, Item> Equipment;
         public List<WeaponType> ValidWeaponTypes { get; set; }
@@ -24,12 +26,14 @@ namespace RPG_heroes.Heroes
             Name = name;
             Level = 1;
 
-
-
+            // setting initial null values to equipment
             Equipment.Add(Slot.Weapon, null);
             Equipment.Add(Slot.Head, null);
             Equipment.Add(Slot.Body, null);
             Equipment.Add(Slot.Legs, null);
+
+
+
 
 
             ValidWeaponTypes = new List<WeaponType>();
@@ -38,6 +42,33 @@ namespace RPG_heroes.Heroes
 
         // This LevelUp method gets overidden in the child.
         public abstract void LevelUp();
+
+        public HeroAttributes TotalAttributes()
+        {
+
+            int Strength = 0;
+            int Dexterity = 0;
+            int Intelligence = 0;
+
+            foreach (Item item in Equipment.Values)
+            {
+                if (item is Armor)
+                {
+                    Armor armor = (Armor)item;
+                    Strength += armor.ArmorAttribute.Strength;
+                    Dexterity += armor.ArmorAttribute.Dexterity;
+                    Intelligence += armor.ArmorAttribute.Intelligence;
+
+                }
+            }
+
+            Strength += LevelAttribute.Strength;
+            Dexterity += LevelAttribute.Dexterity;
+            Intelligence += LevelAttribute.Intelligence;
+            HeroAttributes TotalAttributes = new(Strength, Dexterity, Intelligence);
+
+            return TotalAttributes;
+        }
 
         public  void Equip(Item item)
         {
@@ -74,10 +105,28 @@ namespace RPG_heroes.Heroes
                 }
             }
 
+            Equipment.Remove(item.EquipmentSlot);
+            Equipment.Add(item.EquipmentSlot, item);
 
         }
 
+        public int HeroDamage()
+        {
+            int HeroDamage = 0;
 
+            if (Equipment.ContainsKey(Slot.Weapon))
+            {
+                Weapons weapon = (Weapons)Equipment[Slot.Weapon];
+                HeroDamage = weapon.WeaponDamage * (1 + DamageAttribute / 100);
+            }
+            else
+            {
+                HeroDamage = 1 + DamageAttribute / 100;
+            }
+
+            return HeroDamage;
+
+        }
 
     }
 }

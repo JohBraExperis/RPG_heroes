@@ -18,16 +18,20 @@ namespace RPG_heroes.Heroes.Items
     Wands
 }
 
+
     public class Weapons : Item
     {
+        public WeaponType weaponType { get; set; }
 
-        public Weapons( string name, int requiredLevel, Slot equipmentSlot): base (name, requiredLevel, equipmentSlot)
+        public int WeaponDamage { get; set; }
+
+        public Weapons( string name, int requiredLevel, Slot equipmentSlot, int weaponDamage): base (name, requiredLevel, equipmentSlot)
         { 
         
-
+           WeaponDamage= weaponDamage;
 
         }
 
-        public class WeaponDamage{}
+ 
     }
 }

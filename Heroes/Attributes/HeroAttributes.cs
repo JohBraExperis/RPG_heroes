@@ -13,10 +13,6 @@ namespace RPG_heroes.Heroes.Attributes
         public int Dexterity { get; set; }
         public int Intelligence { get; set; }
 
-        public int StrengthGain { get; set; }
-        public int DexterityGain { get; set; }
-        public int IntelligenceGain { get; set; }
-
         public HeroAttributes(int strength, int dexterity, int intelligence) {
 
             Strength = strength;
