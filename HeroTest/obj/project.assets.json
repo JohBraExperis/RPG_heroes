@@ -1808,6 +1808,16 @@
         "build": {
           "build/netcoreapp3.1/xunit.runner.visualstudio.props": {}
         }
+      },
+      "RPG_heroes/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/RPG_heroes.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RPG_heroes.dll": {}
+        }
       }
     }
   },
@@ -6103,12 +6113,17 @@
         "xunit.runner.visualstudio.2.4.5.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
+    },
+    "RPG_heroes/1.0.0": {
+      "type": "project",
+      "path": "../RPG-heroes/RPG_heroes.csproj",
+      "msbuildProject": "../RPG-heroes/RPG_heroes.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "C:\\Users\\JBraat\\Desktop\\repos\\Dotnet\\Assignment\\RPG_heroes\\RPG_heroes\\RPG_heroes.csproj",
       "Microsoft.NET.Test.Sdk >= 17.3.2",
+      "RPG_heroes >= 1.0.0",
       "coverlet.collector >= 3.1.2",
       "xunit >= 2.4.2",
       "xunit.runner.visualstudio >= 2.4.5"
@@ -6120,11 +6135,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\JBraat\\Desktop\\repos\\Dotnet\\Assignment\\RPG_heroes\\HeroTest\\HeroTest.csproj",
+      "projectUniqueName": "C:\\Users\\JBraat\\Desktop\\repos\\Dotnet\\Assignment\\RPG_heroes_Assignment\\HeroTest\\HeroTest.csproj",
       "projectName": "HeroTest",
-      "projectPath": "C:\\Users\\JBraat\\Desktop\\repos\\Dotnet\\Assignment\\RPG_heroes\\HeroTest\\HeroTest.csproj",
+      "projectPath": "C:\\Users\\JBraat\\Desktop\\repos\\Dotnet\\Assignment\\RPG_heroes_Assignment\\HeroTest\\HeroTest.csproj",
       "packagesPath": "C:\\Users\\JBraat\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\JBraat\\Desktop\\repos\\Dotnet\\Assignment\\RPG_heroes\\HeroTest\\obj\\",
+      "outputPath": "C:\\Users\\JBraat\\Desktop\\repos\\Dotnet\\Assignment\\RPG_heroes_Assignment\\HeroTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\JBraat\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6141,8 +6156,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\JBraat\\Desktop\\repos\\Dotnet\\Assignment\\RPG_heroes\\RPG_heroes\\RPG_heroes.csproj": {
-              "projectPath": "C:\\Users\\JBraat\\Desktop\\repos\\Dotnet\\Assignment\\RPG_heroes\\RPG_heroes\\RPG_heroes.csproj"
+            "C:\\Users\\JBraat\\Desktop\\repos\\Dotnet\\Assignment\\RPG_heroes_Assignment\\RPG-heroes\\RPG_heroes.csproj": {
+              "projectPath": "C:\\Users\\JBraat\\Desktop\\repos\\Dotnet\\Assignment\\RPG_heroes_Assignment\\RPG-heroes\\RPG_heroes.csproj"
             }
           }
         }
@@ -6197,16 +6212,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project 'C:\\Users\\JBraat\\Desktop\\repos\\Dotnet\\Assignment\\RPG_heroes\\RPG_heroes\\RPG_heroes.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "C:\\Users\\JBraat\\Desktop\\repos\\Dotnet\\Assignment\\RPG_heroes\\RPG_heroes\\RPG_heroes.csproj",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  }
 }

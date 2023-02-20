@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BGBseECz8mfDkZVkZL/DAVgMNyEA1v8RIVGGMgQ8tyMK3E9S3bX3xHczX5HnJQFqQiXcOeA9aEwK3Mws5O6HCg==",
-  "success": false,
-  "projectFilePath": "C:\\Users\\JBraat\\Desktop\\repos\\Dotnet\\Assignment\\RPG_heroes\\HeroTest\\HeroTest.csproj",
+  "dgSpecHash": "RbJju1RIB5//KZqyqFweT7yybJ9F0WXn7lgmQikjC/xjmx6hIIZaAfom4RlVeK/8f49gFzhcqR6y5Dm+Pzs46A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\JBraat\\Desktop\\repos\\Dotnet\\Assignment\\RPG_heroes_Assignment\\HeroTest\\HeroTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\JBraat\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\JBraat\\.nuget\\packages\\microsoft.codecoverage\\17.3.2\\microsoft.codecoverage.17.3.2.nupkg.sha512",
@@ -97,15 +97,5 @@
     "C:\\Users\\JBraat\\.nuget\\packages\\xunit.extensibility.execution\\2.4.2\\xunit.extensibility.execution.2.4.2.nupkg.sha512",
     "C:\\Users\\JBraat\\.nuget\\packages\\xunit.runner.visualstudio\\2.4.5\\xunit.runner.visualstudio.2.4.5.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project 'C:\\Users\\JBraat\\Desktop\\repos\\Dotnet\\Assignment\\RPG_heroes\\RPG_heroes\\RPG_heroes.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "C:\\Users\\JBraat\\Desktop\\repos\\Dotnet\\Assignment\\RPG_heroes\\RPG_heroes\\RPG_heroes.csproj",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  "logs": []
 }
