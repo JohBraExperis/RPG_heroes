@@ -110,6 +110,25 @@ namespace RPG_heroes.Heroes
         {
             double HeroDamage = 1;
 
+            switch (this)
+            {
+                case Mage:
+                    DamageAttribute = TotalAttributes().Intelligence;
+                    break;
+
+                case Ranger:
+                    DamageAttribute = TotalAttributes().Dexterity;
+                    break;
+
+                case Rogue:
+                    DamageAttribute = TotalAttributes().Dexterity;
+                    break;
+
+                case Warrior:
+                    DamageAttribute = TotalAttributes().Strength;
+                    break;
+            }
+
             if (Equipment[Slot.Weapon] != null)
             {
                 Weapons weapon = (Weapons)Equipment[Slot.Weapon];
